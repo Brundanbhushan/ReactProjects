@@ -18,7 +18,7 @@ console.log(parent);
     
     // const heading = React.createElement("p", {id: "paragraph", class: "name"}, "hello Brunda!");
     const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(parent);
+root.render(parent);
 
 
   
