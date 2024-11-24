@@ -1,0 +1,44 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "this is my first project in react js",
+  "main": "app.js",
+  "dependencies": {
+    "DOM": "0.0.3",
+    "built": "^1.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "readline": "^1.3.0",
+    "readline-sync": "^1.4.10",
+    "router": "^1.3.8",
+    "sync": "^0.2.5"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brundanbhushan/projects.git"
+  },
+  "keywords": [
+    "react",
+    "html",
+    "css"
+  ],
+  "author": "Brunda Bhushan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brundanbhushan/projects/issues"
+  },
+  "homepage": "https://github.com/Brundanbhushan/projects#readme",
+  "browserlist": [
+    "last 2 versions"
+  ]
+}
