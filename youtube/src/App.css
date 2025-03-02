@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* app.css */
+
+/* Define custom colors as CSS variables */
+:root {
+    --secondary-default: #E5E7EB;  /* Tailwind's colors.neutral[200] */
+    --secondary-hover: #D1D5DB;    /* Tailwind's colors.neutral[300] */
+    --secondary-border: #9CA3AF;   /* Tailwind's colors.neutral[400] */
+    --secondary-text: #6B7280;     /* Tailwind's colors.neutral[500] */
+    --secondary-dark: #1F2937;     /* Tailwind's colors.neutral[800] */
+    --secondary-dark-hover: #111827; /* Tailwind's colors.neutral[900] */
+  }
+
+  * {
+    scrollbar-width: thin;
+  }
+  
+  *::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-dark);
+    border-radius: 9999px;
+}
+
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.scrollbar-hidden:hover::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-border);
+}
+hr {
+  color: #0000001a;
+}
+
