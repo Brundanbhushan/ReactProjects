@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 
 export const SelectButton = ({ children, selected, onClick }) => {
 
-    const selectbutton = styled("span")(({ theme }) => ({
+    const Selectbutton = styled("span")(({}) => ({
         border: "1px solid gold",
         borderRadius: 5,
         padding: 10,
@@ -22,9 +22,9 @@ export const SelectButton = ({ children, selected, onClick }) => {
     }));
 
     return (
-        <selectbutton onClick={onClick}>
+        <Selectbutton onClick={onClick}>
             {children}
-        </selectbutton>
+        </Selectbutton>
     );
 };
 

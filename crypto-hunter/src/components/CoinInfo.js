@@ -7,18 +7,38 @@ import { HistoricalChart } from '../config/api';
 import { chartDays } from '../config/data';
 import { CryptoState } from '../CryptoContext';
 import { SelectButton } from './SelectButton';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+  } from 'chart.js';
+  
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
 
 export const CoinInfo = ({coin}) => {
     console.log(coin);
     const [historicData, setHistoricData] = useState();
     const [days, setDays] = useState(1);
     const [flag,setflag] = useState(false);
-    const { currency} = CryptoState
+    const { currency } = CryptoState();
 
     const fetchHistoricChart = async () => {
         const { data } = await axios(HistoricalChart(coin.id, days, currency))
-
         setHistoricData(data.prices);
+        setflag(true);
     }
 
     useEffect(() => {
@@ -54,7 +74,7 @@ export const CoinInfo = ({coin}) => {
     return (
             <ThemeProvider theme={darkTheme}>
              <Container>
-                {!historicData | flag===false ? (
+                {!historicData || !flag ? (
                   <CircularProgress
                     style={{ color: "gold" }}
                     size={250}
